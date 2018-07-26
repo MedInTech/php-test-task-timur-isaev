@@ -1,7 +1,7 @@
 <?php
 class ClassHeadr {
   
-    public function showHeadrListURL($activeTabMenu, $buttonNew) {
+    public function showHeadrListURL() {
       
         echo "<nav class=\"navbar navbar-default\">";
             echo "<div class=\"container-fluid\">";

@@ -1,10 +1,11 @@
 <?php
-    $strCancel = "?lurl=" . $_GET["lurl"];
-    if (isset($_GET["snu"])) {
-        $curURL = new ClassURL(2, NULL);
-        $curURL->create();
+include_once '../../loading.php';
 
-        header("Location: index.php$strCancel");
-        exit();
-    }
-?>
+$strCancel = "?lurl=" . $_GET["lurl"];
+if (isset($_GET["snu"])) {
+  $curURL = new ClassURL($db_connect, 2, NULL);
+  $curURL->create();
+
+  header("Location: /index.php$strCancel");
+  exit();
+}
